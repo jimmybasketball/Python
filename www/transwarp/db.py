@@ -89,7 +89,7 @@ def create_engine(user, password, database, host='127.0.0.1', port=3306, **kw):
     engine = _Engine(lambda: mysql.connector.connect(**params))
     # test connection...
     logging.info('Init mysql engine <%s> ok.' % hex(id(engine)))
-
+    print '连接成功'
 
 def connection():
     """

@@ -11,8 +11,8 @@ browser= webdriver.Firefox()
 browser.get('https://www.douban.com/')
 # time.sleep(6)
 #
-# browser.find_element_by_id('form_email').send_keys('867745834@qq.com')
-# browser.find_element_by_id('form_password').send_keys('qazwsx@12345')
+# browser.find_element_by_id('form_email').send_keys('xxxx')
+# browser.find_element_by_id('form_password').send_keys('xxxx')
 # browser.find_element_by_class_name('bn-submit').click()
 # #获得元素属性值
 # attribute = browser.find_element_by_class_name('bn-submit').get_attribute('type')

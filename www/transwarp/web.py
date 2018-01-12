@@ -1189,6 +1189,7 @@ class StaticFileRoute(object):
 
     def __call__(self, *args):
         fpath = os.path.join(ctx.application.document_root, args[0])
+        # fpath = os.path.join(os.path.dirname(ctx.application.document_root), args[0])
         if not os.path.isfile(fpath):
             raise HttpError.notfound()
         fext = os.path.splitext(fpath)[1]

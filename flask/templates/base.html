@@ -6,6 +6,7 @@
 {% block navbar %}
 <div class="navbar navbar-inverse" role="navigation">
 <div class="container">
+
 <div class="navbar-header">
 <button type="button" class="navbar-toggle"
 data-toggle="collapse" data-target=".navbar-collapse">
@@ -20,12 +21,20 @@ data-toggle="collapse" data-target=".navbar-collapse">
 <ul class="nav navbar-nav">
 <li><a href="/">Home</a></li>
 </ul>
+
+
 </div>
 </div>
 </div>
 {% endblock %}
 {% block content %}
 <div class="container">
+        {% for message in get_flashed_messages() %}
+<div class="alert alert-warning">
+<button type="button" class="close" data-dismiss="alert">&times;</button>
+{{ message }}
+</div>
+{% endfor %}
 {% block page_content %}{% endblock %}
 </div>
 {% endblock %}
@@ -34,3 +43,4 @@ data-toggle="collapse" data-target=".navbar-collapse">
 {{ super() }}
 {{ moment.include_moment() }}
 {% endblock %}
+
